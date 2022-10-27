@@ -3,19 +3,17 @@ import {View, StyleSheet} from "react-native";
 import Location from "./location/Location";
 import MenuBar from "./menuRight/MenuBar";
 import Message from "./message/Message";
-const HeaderComponent = () => {
+
+const HeaderComponent = ({navigation}) => {
   return(
     <View style={Styles.Container}>
-      <Location />
-
+      <Location navigation={navigation}/>
         <View>
-          <Message />
+          <Message navigation={navigation}/>
         </View>
         <View style={{paddingLeft: "1%"}}>
-          <MenuBar />
+          <MenuBar navigation={navigation}/>
         </View>
-
-
     </View>
   )
 }

@@ -1,14 +1,14 @@
 import React from "react";
 import {SafeAreaView, View, StyleSheet} from "react-native";
 import HeaderComponent from "../headerComponent/HeaderComponent";
+
 const HomeScreen = ({navigation}) => {
-  console.log(navigation);
   return(
-    <SafeAreaView>
-      <View style={Styles.Container}>
-        <HeaderComponent />
-      </View>
-    </SafeAreaView>
+      <SafeAreaView>
+        <View style={Styles.Container}>
+          <HeaderComponent navigation={navigation}/>
+        </View>
+      </SafeAreaView>
   );
 };
 
