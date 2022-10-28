@@ -10,10 +10,12 @@ const ChangeLocation = () => {
         <View style={{ paddingTop: "4%" }}>
           <Icon name={"search"} size={15} />
         </View>
-        <TextInput
-          style={styles.textInput}
-          placeholder={"Địa điểm hiện tại của bạn ở đâu?..."}
-        />
+        <View style={styles.textInput}>
+          <TextInput
+            style={{fontWeight: "400",}}
+            placeholder={"Địa điểm hiện tại của bạn ở đâu?"}
+          />
+        </View>
         <TouchableOpacity style={{ paddingTop: "4%" }}>
           <Icon name={"map"} size={15} />
         </TouchableOpacity>
@@ -29,7 +31,7 @@ const ChangeLocation = () => {
         </View>
 
         <View style={{ marginTop: "4%", paddingHorizontal: "5%", padding: "2%", backgroundColor: "white" }}>
-          <TouchableOpacity style={{ flexDirection: "row" }}>
+          <TouchableOpacity style={{ flexDirection: "row", alignContent: "center" }}>
             <Icon name={"home"} size={20} style={{ paddingTop: "3%" }} />
             <View style={{ paddingLeft: "3%" }}>
               <Text style={{ fontWeight: "500" }}>Nhà</Text>
@@ -46,7 +48,7 @@ const ChangeLocation = () => {
           backgroundColor: "white",
           borderBottomColor: "gray",
         }}>
-          <TouchableOpacity style={{ flexDirection: "row" }}>
+          <TouchableOpacity style={{ flexDirection: "row", alignContent: "center" }}>
             <Icon name={"briefcase"} size={20} style={{ paddingTop: "3%" }} />
             <View style={{ paddingLeft: "3%" }}>
               <Text style={{ fontWeight: "500" }}>Công ty</Text>
@@ -63,7 +65,7 @@ const ChangeLocation = () => {
           backgroundColor: "white",
           borderBottomColor: "gray",
         }}>
-          <TouchableOpacity style={{ flexDirection: "row" }}>
+          <TouchableOpacity style={{ flexDirection: "row", alignContent: "center" }}>
             <Icon name={"plus"} size={20} style={{ paddingTop: "1%" }} color={"#3ac5c9"} />
             <View style={{ paddingLeft: "3%" }}>
               <Text style={{ fontWeight: "500", paddingTop: "1%", color: "#3ac5c9" }}>Thêm địa chỉ</Text>
@@ -80,10 +82,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: "5%",
     backgroundColor: "white",
+    alignContent: "center"
   },
   textInput: {
-    paddingRight: "25%",
-    fontWeight: "bold",
+    marginRight: "15%",
+    paddingRight: 5,
+
   },
 });
 export default ChangeLocation;
