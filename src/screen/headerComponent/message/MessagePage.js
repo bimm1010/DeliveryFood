@@ -4,7 +4,7 @@ import { Image, Text, View, StyleSheet } from "react-native";
 const MessagePage = () => {
   return (
     <View style={styles.Container}>
-      <Image style={styles.resizeImage}  source={require("./baedale-cat-sherlock-01-pts.png")} />
+      <Image style={styles.resizeImage}  source={require('../../../image/baedale-cat-sherlock-01-pts.png')} />
       <View style={{alignItems: "center"}}>
         <Text style={{fontWeight: "bold"}}>Đang hóng tin nhắn đầu tiên...</Text>
         <Text style={{fontSize: 12}}>BAEMIN sẽ sớm trở lại, lợi hại hơn xưa!</Text>
