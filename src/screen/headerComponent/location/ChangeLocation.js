@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     marginRight: "15%",
-    paddingRight: 5,
+    paddingRight: "2%"
 
   },
 });
