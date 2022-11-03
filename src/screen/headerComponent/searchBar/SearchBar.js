@@ -25,7 +25,6 @@ const Styles = StyleSheet.create({
     justifyContent: 'center'
   },
   icon: {
-
     paddingHorizontal: "2%"
   }
 })
