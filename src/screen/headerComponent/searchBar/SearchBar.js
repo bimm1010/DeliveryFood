@@ -1,16 +1,15 @@
 import React from "react";
-import {TextInput, View, StyleSheet} from "react-native";
+import {TextInput, View, StyleSheet, TouchableOpacity, Text} from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-const SearchBar = () => {
+const SearchBar = ({navigation}) => {
   return(
-    <View style={Styles.textInput}>
+    <TouchableOpacity
+        onPress={() => navigation.navigate("Search")}
+        style={Styles.textInput}>
       <Icon name={"ios-search-outline"} size={15} style={Styles.icon}/>
-      <TextInput
-        style={{paddingHorizontal: "20%"}}
-        placeholder={"tìm nhà hàng, món ăn"}
-      />
-    </View>
+      <Text>tìm nhà hàng, món ăn</Text>
+    </TouchableOpacity>
   )
 }
 
@@ -21,10 +20,12 @@ const Styles = StyleSheet.create({
     paddingHorizontal: "2%",
     backgroundColor: "#F5F5F5",
     borderRadius: 25,
-    marginTop: "5%"
+    marginTop: "5%",
+    padding: "2%",
+    justifyContent: 'center'
   },
   icon: {
-    paddingTop: "4%",
+
     paddingHorizontal: "2%"
   }
 })

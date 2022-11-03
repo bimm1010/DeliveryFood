@@ -14,4 +14,6 @@ const MenuBar = ({navigation}) => {
 }
 
 
+
+
 export default MenuBar;

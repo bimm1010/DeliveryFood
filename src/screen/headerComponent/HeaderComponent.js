@@ -13,13 +13,13 @@ const HeaderComponent = ({ navigation }) => {
         <View>
           <Message navigation={navigation} />
         </View>
-        <View style={{ paddingLeft: "4%" }}>
+        <View style={{ paddingLeft: "4%"}}>
           <MenuBar navigation={navigation} />
         </View>
       </View>
 
       <View>
-        <SearchBar />
+        <SearchBar navigation={navigation}/>
       </View>
     </View>
 
