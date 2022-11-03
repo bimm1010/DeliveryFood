@@ -3,6 +3,7 @@ import { Image, View, StyleSheet, TouchableOpacity, Text, ScrollView } from "rea
 import Icon from 'react-native-vector-icons/Entypo'
 import FooterHeader from "./FooterHeader";
 import Content1 from "./Content1";
+import Content2 from "./Content2";
 const Acc = () => {
   return(
     <ScrollView>
@@ -17,6 +18,10 @@ const Acc = () => {
 
       <View>
         <Content1 />
+      </View>
+
+      <View>
+        <Content2 />
       </View>
     </ScrollView>
   )

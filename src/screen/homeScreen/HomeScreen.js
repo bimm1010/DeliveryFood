@@ -5,9 +5,12 @@ import HeaderComponent from "../headerComponent/HeaderComponent";
 const HomeScreen = ({navigation}) => {
   return(
       <SafeAreaView>
-        <View style={Styles.Container}>
-          <HeaderComponent navigation={navigation}/>
+        <View style={Styles.bg}>
+          <View style={Styles.Container}>
+            <HeaderComponent navigation={navigation}/>
+          </View>
         </View>
+
       </SafeAreaView>
   );
 };
@@ -15,7 +18,10 @@ const HomeScreen = ({navigation}) => {
 const Styles = StyleSheet.create({
   Container: {
     marginHorizontal: "4%",
-    marginTop: "2%"
+    marginTop: "2%",
+  },
+  bg: {
+    backgroundColor: "white"
   }
 })
 

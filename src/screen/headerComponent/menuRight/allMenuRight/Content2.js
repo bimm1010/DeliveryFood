@@ -1,39 +1,47 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {StyleSheet, View, Text, TouchableOpacity} from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
-
-const Content1 = () => {
-  return (
+const Content2 = () => {
+  return(
     <View style={Styles.Container}>
       <View>
         <TouchableOpacity style={Styles.itemRow}>
-          <Icon name={"ios-wallet-outline"} size={15} />
+          <Icon name={"wallet"} size={15}/>
           <Text style={Styles.textPadding}>
-            Ví Coupon
+            Đánh giá BAEMIN
           </Text>
         </TouchableOpacity>
       </View>
 
-      <View style={{borderTopWidth: 0.2, borderBottomWidth: 0.2, borderColor: "gray"}}>
+      <View style={Styles.borderLine}>
         <TouchableOpacity style={Styles.itemRow}>
-          <Icon name={"ios-wallet-outline"} size={15} />
+          <Icon name={"wallet"} size={15}/>
           <Text style={Styles.textPadding}>
-            Quản lý thanh toán
+            Thông báo
+          </Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={{borderBottomWidth: 0.2, borderColor: "gray"}}>
+        <TouchableOpacity style={Styles.itemRow}>
+          <Icon name={"wallet"} size={15}/>
+          <Text style={Styles.textPadding}>
+            Hỗ trợ
           </Text>
         </TouchableOpacity>
       </View>
 
       <View>
         <TouchableOpacity style={Styles.itemRow}>
-          <Icon name={"ios-wallet-outline"} size={15} />
+          <Icon name={"wallet"} size={15}/>
           <Text style={Styles.textPadding}>
-            Chia sẻ thông tin cá nhân
+            Điều khoản và chính sách
           </Text>
         </TouchableOpacity>
       </View>
     </View>
-  );
-};
+  )
+}
 
 const Styles = StyleSheet.create({
   Container: {
@@ -48,6 +56,11 @@ const Styles = StyleSheet.create({
   textPadding: {
     paddingLeft: "3%"
   },
+  borderLine: {
+    borderTopWidth: 0.2,
+    borderBottomWidth: 0.2,
+    borderColor: "gray",
+  }
+})
 
-});
-export default Content1;
+export default Content2
