@@ -1,0 +1,44 @@
+import React, {useState, useEffect, } from "react";
+import { View, TouchableOpacity, Text, StyleSheet, ScrollView, Dimensions } from "react-native";
+import { Brand } from "../API/APIMART";
+import FastImage from "react-native-fast-image";
+
+const {width: screenWidth} = Dimensions.get('window')
+
+const ListTopBrandMart = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        setData(Brand)
+    }, [])
+
+    return(
+        <View style={{marginTop: "5%"}}>
+            <ScrollView horizontal contentContainerStyle={{width: (screenWidth / 2.2) * data.length}}>
+                {data.map((e, index) => (
+                    <TouchableOpacity key={index} style={Styles.container}>
+                        <FastImage source={{uri: e.imageBrand}} style={{width: 120, height: 100}}/>
+                        <Text>{e.name}</Text>
+                        <Text>{e.title}</Text>
+                        <Text>{e.add}</Text>
+                    </TouchableOpacity>
+                ))}
+            </ScrollView>
+        </View>
+    )
+}
+
+const Styles = StyleSheet.create({
+    container: {
+        paddingHorizontal: "1%",
+        backgroundColor: "white",
+        alignItems: "center",
+        marginBottom: "5%",
+        marginRight: "2%",
+        paddingBottom: "1%",
+        borderRadius: 10
+    },
+    
+})
+
+export default ListTopBrandMart;

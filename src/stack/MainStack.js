@@ -5,7 +5,7 @@ import ChangeLocation from "../screen/headerComponent/location/ChangeLocation";
 import MessagePage from "../screen/headerComponent/message/MessagePage";
 import Acc from "../screen/headerComponent/menuRight/allMenuRight/Acc";
 import SearchComponent from "../screen/headerComponent/searchBar/SearchComponent";
-
+import MainNaviMart from "../screen/contentComponent/midContent/naviMart/mainNaviMart/MainNaViMart";
 const Stack = createNativeStackNavigator()
 const MainStack = () => {
     return (
@@ -14,7 +14,8 @@ const MainStack = () => {
             <Stack.Screen name={'ChangeLocation'} component={ChangeLocation} options={{title: "Nhập địa chỉ"}}/>
             <Stack.Screen name={"Mess"} component={MessagePage} options={{title: "Hộp thư"}}/>
             <Stack.Screen name={'Account'} component={Acc} options={{title: "Thông tin tài khoản"}}/>
-            <Stack.Screen name={"Search"} component={SearchComponent}/>
+            <Stack.Screen name={"Search"} component={SearchComponent} options={{headerShown: false,}}/>
+            <Stack.Screen name={"MainNavi"} component={MainNaviMart} options={{headerShown: false}}/>
         </Stack.Navigator>
     )
 }
